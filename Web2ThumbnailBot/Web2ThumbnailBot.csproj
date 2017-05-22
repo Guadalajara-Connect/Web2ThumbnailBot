@@ -113,13 +113,14 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions\BotAction.cs" />
+    <Compile Include="Actions\IBotAction.cs" />
+    <Compile Include="Actions\ThumbnailBotAction.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
-    <Compile Include="Dialogs\RootDialog.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\Thumbnails.cs" />
     <Compile Include="Helpers\UrlUtilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -4,7 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Web2ThumbnailBot.Dialogs;
+using Web2ThumbnailBot.Actions;
 
 namespace Web2ThumbnailBot.Controllers
 {
@@ -19,10 +19,7 @@ namespace Web2ThumbnailBot.Controllers
         {
             if (activity.Type == ActivityTypes.Message)
             {
-                // ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
-
-                await Conversation.SendAsync(activity, () => new Thumbnails2());
-                // await ProcessResponse(connector, activity);
+                await Conversation.SendAsync(activity, () => new ThumbnailBotAction());
             }
             else
             {
@@ -31,21 +28,6 @@ namespace Web2ThumbnailBot.Controllers
 
             return Request.CreateResponse(HttpStatusCode.OK);
         }
-
-        //private async Task ProcessResponse(ConnectorClient connector, Activity input)
-        //{
-        //    if (IsValidUri(input.Text, out string exMsg))
-        //    {
-        //        await Thumbnails.ProcessScreenshot(connector, input);
-        //    }
-        //    else
-        //    {
-        //        var reply = input.CreateReply("Hi, what is the URL you want a thumbnail for?");
-        //        await connector.Conversations.ReplyToActivityAsync(reply);
-        //    }
-        //}
-
-        
 
         private Activity HandleSystemMessage(Activity message)
         {
