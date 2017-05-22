@@ -1,0 +1,1 @@
+# https-github.com-miguelEpam-Web2ThumbnailBot
