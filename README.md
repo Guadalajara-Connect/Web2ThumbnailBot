@@ -1,1 +1,1 @@
-# https-github.com-miguelEpam-Web2ThumbnailBot
+# Web to thumbnail bot
