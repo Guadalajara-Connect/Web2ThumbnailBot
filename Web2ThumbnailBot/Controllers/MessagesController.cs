@@ -4,7 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Web2ThumbnailBot.Actions;
+using Web2ThumbnailBot.Dialogs;
 
 namespace Web2ThumbnailBot.Controllers
 {
@@ -19,7 +19,7 @@ namespace Web2ThumbnailBot.Controllers
         {
             if (activity.Type == ActivityTypes.Message)
             {
-                await Conversation.SendAsync(activity, () => new ThumbnailBotAction());
+                await Conversation.SendAsync(activity, () => new ThumbnailBotDialog());
             }
             else
             {

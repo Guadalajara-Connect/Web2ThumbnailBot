@@ -3,10 +3,10 @@ using Microsoft.Bot.Connector;
 using System;
 using System.Threading.Tasks;
 
-namespace Web2ThumbnailBot.Actions
+namespace Web2ThumbnailBot.Dialogs
 {
     [Serializable]
-    public abstract class BotAction : IDialog<object>, IBotAction
+    public abstract class BotBaseDialog : IDialog<object>, ICardDialog
     {
         public abstract Task<Activity> CreateResponseCard(Activity activity);
 

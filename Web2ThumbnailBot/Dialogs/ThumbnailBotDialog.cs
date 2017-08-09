@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Web2ThumbnailBot.Helpers;
 
-namespace Web2ThumbnailBot.Actions
+namespace Web2ThumbnailBot.Dialogs
 {
     [Serializable]
-    public class ThumbnailBotAction : BotAction
+    public class ThumbnailBotDialog : BotBaseDialog
     {
         public override Task<Activity> CreateResponseCard(Activity activity)
         {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.Bot.Connector;
 using System.Threading.Tasks;
 
-namespace Web2ThumbnailBot.Actions
+namespace Web2ThumbnailBot.Dialogs
 {
-    public interface IBotAction
+    public interface ICardDialog
     {
         Task<Activity> CreateResponseCard(Activity activity);
     }
