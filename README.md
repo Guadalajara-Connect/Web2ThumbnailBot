@@ -1,1 +1,1 @@
-# Web to thumbnail bot
+# Thumbnail bot
